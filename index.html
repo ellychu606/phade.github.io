@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>elly's portfolio</title>
+  <style>
+    @font-face {
+      font-family: 'Lostar';
+      src: url('https://drive.google.com/uc?export=download&id=1FdvcHfK5-K_SzE1CpMjUlKswPxEV73KC') format('truetype');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Brigast';
+      src: url('https://drive.google.com/uc?export=download&id=1tqBHI--zqIDEZYEARBRXbH0oZfTDIpIh') format('truetype');
+      font-display: swap;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: #0d0b0f;
+      font-family: 'Brigast', Georgia, serif;
+      color: white;
+    }
+
+    .page { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+
+    .bg {
+      position: absolute; inset: 0;
+      background-image: url('https://media.discordapp.net/attachments/1274286030731608074/1478771134920130791/webaite_bg_res.png?ex=69a99c70&is=69a84af0&hm=0217609fb6981db6c542cc503f8c5f0585ce36bd715ceb06f28aa1986fce2772&=&format=webp&quality=lossless&width=1521&height=856');
+      background-size: cover; background-position: center; z-index: 0;
+    }
+
+    .navbar {
+      position: absolute; top: 18px; left: 18px; right: 18px; height: 44px;
+      background: white; border-radius: 12px; z-index: 10;
+      display: flex; align-items: center; padding: 0 16px;
+    }
+    .nav-dot { width: 18px; height: 18px; background: #1a1a1a; border-radius: 50%; }
+
+    .heading {
+      position: absolute; top: 90px; left: 40px; z-index: 10;
+      font-family: 'Lostar', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1; color: white;
+      text-transform: uppercase; letter-spacing: 0.02em;
+    }
+
+    .subheading {
+      position: absolute; top: 230px; left: 42px; z-index: 10;
+      font-family: 'Brigast', Georgia, serif;
+      font-size: clamp(0.75rem, 1.3vw, 1rem);
+      color: #ff2d6e; line-height: 1.5; font-style: italic;
+    }
+
+    .icons-col {
+      position: absolute; right: 40px; top: 50%; transform: translateY(-50%);
+      z-index: 10; display: flex; flex-direction: column; gap: 28px; align-items: center;
+    }
+
+    .icon-btn {
+      display: flex; align-items: center; justify-content: center;
+      width: 68px; height: 68px; text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease; opacity: 0.9;
+    }
+    .icon-btn:hover { transform: scale(1.12); opacity: 1; }
+
+    .icon-btn svg {
+      width: 56px; height: 56px;
+      stroke: white; fill: none; stroke-width: 1.5;
+    }
+    .icon-btn.star svg { stroke: #ff2d6e; }
+
+    .icon-btn img {
+      width: 60px; height: 60px; object-fit: contain;
+      transition: filter 0.2s ease;
+    }
+    .icon-btn:hover img { filter: brightness(1.2); }
+
+    .marquee-wrap {
+      position: absolute; bottom: 30px; left: 40px;
+      z-index: 10; overflow: hidden; width: 320px; text-decoration: none;
+    }
+
+    .marquee-line {
+      display: block;
+      font-family: 'Brigast', Georgia, serif;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      color: #5c6fff; font-style: italic;
+      white-space: nowrap; line-height: 1.45;
+      animation: wave 2.4s ease-in-out infinite;
+    }
+    .marquee-line:nth-child(1) { animation-delay: 0s; }
+    .marquee-line:nth-child(2) { animation-delay: 0.15s; }
+    .marquee-line:nth-child(3) { animation-delay: 0.3s; }
+    .marquee-line:nth-child(4) { animation-delay: 0.45s; }
+    .marquee-line:nth-child(5) { animation-delay: 0.6s; }
+    .marquee-line:nth-child(6) { animation-delay: 0.75s; }
+
+    @keyframes wave {
+      0%, 100% { transform: translateX(0px); opacity: 0.7; }
+      50% { transform: translateX(10px); opacity: 1; }
+    }
+
+    .divider {
+      position: absolute; right: 116px; top: 80px; bottom: 30px;
+      width: 1px; background: rgba(255,255,255,0.15); z-index: 9;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="bg"></div>
+
+    <div class="navbar"><div class="nav-dot"></div></div>
+
+    <h1 class="heading">A PORTFOLIO<br>FOR ALL YOUR NEEDS</h1>
+
+    <p class="subheading">but not really,<br>this is just a place to hang out.</p>
+
+    <div class="divider"></div>
+
+    <div class="icons-col">
+      <a class="icon-btn" href="https://x.com/ghostyph_" target="_blank" title="Twitter">
+        <svg viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="22"/>
+          <ellipse cx="26" cy="26" rx="11" ry="22"/>
+          <line x1="4" y1="26" x2="48" y2="26"/>
+          <line x1="4" y1="17" x2="48" y2="17"/>
+          <line x1="4" y1="35" x2="48" y2="35"/>
+        </svg>
+      </a>
+
+      <a class="icon-btn star" href="#" target="_blank" title="Coming soon">
+        <svg viewBox="0 0 52 52">
+          <line x1="26" y1="2" x2="26" y2="50"/>
+          <line x1="2" y1="26" x2="50" y2="26"/>
+          <line x1="8" y1="8" x2="44" y2="44"/>
+          <line x1="44" y1="8" x2="8" y2="44"/>
+        </svg>
+      </a>
+
+      <a class="icon-btn" href="#" target="_blank" title="Blog (coming soon)">
+        <img src="https://media.discordapp.net/attachments/1274286030731608074/1478771136283148319/glass.png?ex=69a99c71&is=69a84af1&hm=b204af0e39b8d16f8b691d78ce8322a36bc4e9cdc9a0c54cab5ed7da582cad5e&=&format=webp&quality=lossless" alt="Blog"/>
+      </a>
+
+      <a class="icon-btn" href="#" target="_blank" title="Photography (coming soon)">
+        <img src="https://media.discordapp.net/attachments/1274286030731608074/1478771135364730970/gallery.png?ex=69a99c70&is=69a84af0&hm=e3d2dacc01a25f1e999a6fff0a1c3910a7dd308c4ff541f71d2bb481ea3d248b&=&format=webp&quality=lossless" alt="Gallery"/>
+      </a>
+    </div>
+
+    <a class="marquee-wrap" href="https://ellychuwu.carrd.co" target="_blank">
+      <span class="marquee-line">my real portfolio is here</span>
+      <span class="marquee-line">my real portfolio is here</span>
+      <span class="marquee-line">my real portfolio is here</span>
+      <span class="marquee-line">my real portfolio is here</span>
+      <span class="marquee-line">my real portfolio is here</span>
+      <span class="marquee-line">my real portfolio is here</span>
+    </a>
+  </div>
+</body>
+</html>
