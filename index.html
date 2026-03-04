@@ -35,47 +35,51 @@
     }
 
     .navbar {
-  position: absolute; top: 18px; left: 18px; right: 18px; height: 44px;
-  background: white; border-radius: 12px; z-index: 10;
-  display: flex; align-items: center; padding: 0 16px;
-}
-
+      position: absolute; top: 0; left: 0; right: 0; height: 48px;
+      background: white; border-radius: 0 0 14px 14px; z-index: 10;
+      display: flex; align-items: center; padding: 0 16px;
+    }
+    .nav-dot { width: 27px; height: 27px; background: #1a1a1a; border-radius: 50%; }
 
     .heading {
-      position: absolute; top: 90px; left: 40px; z-index: 10;
+      position: absolute; top: 80px; left: 40px; z-index: 10;
       font-family: 'Lostar', Georgia, serif;
       font-size: clamp(3rem, 6.5vw, 5.5rem);
-      line-height: 1.00; color: white;
-      text-transform: uppercase; letter-spacing: 0.04em;
+      line-height: 1.08; color: white;
+      text-transform: uppercase; letter-spacing: 0.02em;
     }
 
     .subheading {
-      position: absolute; top: 310px; left: 44px; z-index: 10;
+      position: absolute; top: 300px; left: 44px; z-index: 10;
       font-family: 'Brigast', Georgia, serif;
       font-size: clamp(1rem, 1.6vw, 1.3rem);
-      color: #f21a49; line-height: 1.6; font-style: italic;
+      color: #ff2d6e; line-height: 1.6; font-style: italic;
     }
 
     .icons-col {
       position: absolute; right: 36px; top: 50%; transform: translateY(-50%);
-      z-index: 10; display: flex; flex-direction: column; gap: 32px; align-items: center;
+      z-index: 10; display: flex; flex-direction: column; gap: 24px; align-items: center;
+      border-right: 3px solid rgba(255,255,255,1);
+      padding-right: 22px;
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
 
     .icon-btn {
       display: flex; align-items: center; justify-content: center;
-      width: 88px; height: 88px; text-decoration: none;
+      width: 120px; height: 120px; text-decoration: none;
       transition: transform 0.2s ease, opacity 0.2s ease; opacity: 0.9;
     }
-    .icon-btn:hover { transform: scale(1.12); opacity: 1; }
+    .icon-btn:hover { transform: scale(1.1); opacity: 1; }
 
     .icon-btn svg {
-      width: 76px; height: 76px;
-      stroke: white; fill: none; stroke-width: 1.4;
+      width: 108px; height: 108px;
+      stroke: white; fill: none; stroke-width: 1.2;
     }
     .icon-btn.star svg { stroke: #ff2d6e; }
 
     .icon-btn img {
-      width: 78px; height: 78px; object-fit: contain;
+      width: 110px; height: 110px; object-fit: contain;
       transition: filter 0.2s ease;
     }
     .icon-btn:hover img { filter: brightness(1.2); }
@@ -91,20 +95,25 @@
       font-size: clamp(1rem, 1.6vw, 1.25rem);
       color: #5c6fff; font-style: italic;
       white-space: nowrap; line-height: 1.45;
-      animation: wave 2.4s ease-in-out infinite;
+      animation: wave 1.8s ease-in-out infinite;
     }
-.marquee-line:nth-child(2) { animation-delay: 0.25s; }
-.marquee-line:nth-child(3) { animation-delay: 0.5s; }
-.marquee-line:nth-child(4) { animation-delay: 0.75s; }
-.marquee-line:nth-child(5) { animation-delay: 1s; }
-.marquee-line:nth-child(6) { animation-delay: 1.25s; }
+    .marquee-line:nth-child(1) { animation-delay: 0s; }
+    .marquee-line:nth-child(2) { animation-delay: 0.2s; }
+    .marquee-line:nth-child(3) { animation-delay: 0.4s; }
+    .marquee-line:nth-child(4) { animation-delay: 0.6s; }
+    .marquee-line:nth-child(5) { animation-delay: 0.8s; }
+    .marquee-line:nth-child(6) { animation-delay: 1.0s; }
 
     @keyframes wave {
-  0%, 100% { transform: translateX(0px) translateY(0px); opacity: 0.5; }
-  50% { transform: translateX(40px) translateY(-4px); opacity: 1; }
-}
+      0%   { transform: translateX(0px) translateY(0px) skewX(0deg); opacity: 0.4; }
+      25%  { transform: translateX(28px) translateY(-6px) skewX(-4deg); opacity: 1; }
+      50%  { transform: translateX(52px) translateY(0px) skewX(0deg); opacity: 0.85; }
+      75%  { transform: translateX(22px) translateY(6px) skewX(3deg); opacity: 1; }
+      100% { transform: translateX(0px) translateY(0px) skewX(0deg); opacity: 0.4; }
+    }
+
     .divider {
-      position: absolute; right: 136px; top: 80px; bottom: 30px;
+      position: absolute; right: 136px; top: 60px; bottom: 30px;
       width: 1px; background: rgba(255,255,255,0.15); z-index: 9;
     }
   </style>
@@ -117,7 +126,7 @@
 
     <h1 class="heading">A PORTFOLIO<br>FOR ALL YOUR NEEDS</h1>
 
-    <p class="subheading">but not really,<br>this is only just a place to hang out.</p>
+    <p class="subheading">but not really,<br>this is simply a place to hang out.</p>
 
     <div class="divider"></div>
 
